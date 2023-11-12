@@ -1,5 +1,5 @@
 
-import Header from './../components/shared/Header/Header'
+import Header from '../components/shared/Header/Header'
 
 export default function Home() {
   return (
