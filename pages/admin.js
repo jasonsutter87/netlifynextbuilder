@@ -4,6 +4,14 @@ import fs from 'fs';
 import path from 'path';
 
 const AdminPage = ({ adminHtml }) => {
+  const router = useRouter();
+
+  // Use useEffect to redirect to /admin/index.html on mount
+  useEffect(() => {
+    // Redirect to /admin/index.html
+    router.push('/admin/index.html');
+  }, []);
+
   return (
     <div dangerouslySetInnerHTML={{ __html: adminHtml }} />
   );
