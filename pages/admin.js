@@ -1,28 +1,20 @@
 // pages/admin.js
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
+
+import { useEffect } from 'react';
 
 const AdminPage = ({ adminHtml }) => {
+  useEffect(() => {
+    // Redirect to /admin/index.html on the client side
+    window.location.href = '/admin/index.html';
+  }, []);
+
   return (
-    <div dangerouslySetInnerHTML={{ __html: adminHtml }} />
+    <div>
+      {/* You can choose to render the HTML content if needed */}
+      {/* <div dangerouslySetInnerHTML={{ __html: adminHtml }} /> */}
+    </div>
   );
 };
-
-export async function getStaticProps() {
-  // Read the HTML content from public/admin/index.html
-  const filePath = path.join(process.cwd(), 'public', 'admin', 'index.html');
-  const adminHtml = fs.readFileSync(filePath, 'utf8');
-
-  return {
-    redirect: {
-      destination: '/admin/index.html',
-      permanent: true,
-    },
-    props: {
-      adminHtml,
-    },
-  };
-}
 
 export default AdminPage;
