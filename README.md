@@ -37,6 +37,19 @@ npx cypress open
 
 
 ### builder.io
+once the server is running
+setup the app by opening [http://localhost:3000](http://localhost:3000) on the brower.
+
+in the code create a new file `.env`
+set a constant `NEXT_PUBLIC_BUILDER_API_KEY=` and paste your api key that was generate on setup.
+
+
+ 
+
+
+
+
+
 using the [builder.io chrome extention](https://chrome.google.com/webstore/detail/builderio/cfldfgibklhmjhnkfighkbafbkbfcmij) hover over a section, and click to open
 
 or 
